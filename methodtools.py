@@ -12,7 +12,7 @@ else:
         import functools32
     except ImportError:
         # raise AttributeError about fallback failure
-        functools.lru_cache
+        functools.lru_cache  # install `functools32` to run on py2
     else:
         _functools_lru_cache = functools32.lru_cache
 

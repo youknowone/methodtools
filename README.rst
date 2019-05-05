@@ -60,6 +60,9 @@ PyPI is the recommended way.
 To browse versions and tarballs, visit:
     `<https://pypi.python.org/pypi/methodtools/>`_
 
+.. note::
+    If you are working on Python 2, install also `functools32`.
+
 
 See also
 --------
