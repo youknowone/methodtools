@@ -24,14 +24,14 @@ you expected.
             ...
 
         # cached classmethod. the storage lifetime follows `A` class
-        @lru_cache()
-        @classmethod()
+        @lru_cache()  # the order is important!
+        @classmethod  # always lru_cache on top of classmethod 
         def cached_classmethod(self, args):
             ...
 
         # cached staticmethod. the storage lifetime follows `A` class
-        @lru_cache()
-        @staticmethod()
+        @lru_cache()  # the order is important!
+        @staticmethod  # always lru_cache on top of classmethod
         def cached_staticmethod(self, args):
             ...
 
