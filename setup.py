@@ -11,6 +11,7 @@ def get_version():
     m = re.search(r"__version__ = '([0-9\.]+)'", source)
     version = m.group(1)
     assert version
+    return version
 
 
 install_requires = [
