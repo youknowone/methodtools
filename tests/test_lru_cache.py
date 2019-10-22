@@ -90,3 +90,10 @@ def test_lru_cache():
     assert o1.s.__call__ == o2.s.__call__
     assert o1.s.cache_info().misses == 1
     assert o2.s.cache_info().misses == 1
+
+    assert f(2) == 1002
+    assert c.m(2) == 2002
+    assert C.c(2) == 3002
+    assert c.c(2) == 3002
+    assert C.s(2) == 4002
+    assert c.s(2) == 4002
