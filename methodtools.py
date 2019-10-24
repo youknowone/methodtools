@@ -1,7 +1,7 @@
 import functools
 from wirerope import Wire, WireRope
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 __all__ = 'lru_cache',
 
 
