@@ -35,4 +35,4 @@ class _LruCacheWire(Wire):
 
 @functools.wraps(_functools_lru_cache)
 def lru_cache(*args, **kwargs):
-    return WireRope(_LruCacheWire, rope_args=(args, kwargs))
+    return WireRope(_LruCacheWire, wraps=True, rope_args=(args, kwargs))
