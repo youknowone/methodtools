@@ -5,11 +5,17 @@ def test_lru_cache():
 
     @_functools_lru_cache(maxsize=4)
     def ff(v):
+        """ff is a functools lru function"""
         return 0 + v
+
+    assert ff.__doc__ == """ff is a functools lru function"""
 
     @lru_cache(maxsize=4)
     def f(v):
+        """f is a methodtools lru function"""
         return 1000 + v
+
+    assert f.__doc__ == """f is a methodtools lru function"""
 
     class C(object):
 
@@ -20,17 +26,27 @@ def test_lru_cache():
 
         @lru_cache(maxsize=4)
         def m(self, v):
+            """m"""
             return self.base + v
+        assert m.__doc__ == 'm'
 
         @lru_cache(maxsize=4)
         @classmethod
         def c(cls, v):
+            """c"""
             return cls.base + v
+        assert c.__doc__ == 'c'
 
         @lru_cache(maxsize=4)
         @staticmethod
         def s(v):
+            """s"""
             return 4000 + v
+        assert s.__doc__ == 's'
+
+    assert C.m.__doc__ == 'm'
+    assert C.c.__doc__ == 'c'
+    assert C.s.__doc__ == 's'
 
     c = C()
     assert f.cache_info() == ff.cache_info()
