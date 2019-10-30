@@ -31,7 +31,7 @@ you expected.
 
         # cached staticmethod. the storage lifetime follows `A` class
         @lru_cache()  # the order is important!
-        @staticmethod  # always lru_cache on top of classmethod
+        @staticmethod  # always lru_cache on top of staticmethod
         def cached_staticmethod(self, args):
             ...
 
