@@ -9,6 +9,8 @@ methodtools
 Expand functools features to methods, classmethods, staticmethods and even for
 (unofficial) hybrid methods.
 
+For now, methodtools only provides `methodtools.lru_cache`.
+
 Use `methodtools` module instead of `functools` module. Than it will work as
 you expected.
 
@@ -25,7 +27,7 @@ you expected.
 
         # cached classmethod. the storage lifetime follows `A` class
         @lru_cache()  # the order is important!
-        @classmethod  # always lru_cache on top of classmethod 
+        @classmethod  # always lru_cache on top of classmethod
         def cached_classmethod(self, args):
             ...
 
@@ -38,14 +40,6 @@ you expected.
     @lru_cache()  # just same as functools.lru_cache
     def cached_function():
         ...
-
-
-Documentation
--------------
-
-For now, `methodtools` only provides `lru_cache`.
-See above for example.
-See documentation of `functools.lru_cache` for arguments details.
 
 
 Installation
@@ -67,5 +61,8 @@ To browse versions and tarballs, visit:
 See also
 --------
 
-This project is derived from `Ring <https://github.com/youknowone/ring/>`_,
-a rich cache interface using the same method handling technique.
+- [Documentation](https://methodtools.readthedocs.io/en/latest/)
+- This project is derived from `Ring <https://github.com/youknowone/ring/>`_,
+  a rich cache interface using the same method handling technique.
+- To learn more about bound method dispatching, see also
+  [wirerope](https://github.com/youknowone/wirerope).
