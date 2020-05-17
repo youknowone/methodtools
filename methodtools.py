@@ -1,3 +1,40 @@
+""":mod:`methodtools` --- functools for methods
+===============================================
+
+Expand functools features to methods, classmethods, staticmethods and even for (unofficial) hybrid methods.
+
+For now, methodtools only provides :func:`methodtools.lru_cache`.
+
+Use methodtools module instead of functools module. Than it will work as you expected - cache for each bound method.
+
+.. code-block:: python
+
+    from methodtools import lru_cache
+
+    class A(object):
+
+        # cached method. the storage lifetime follows `self` object
+        @lru_cache()
+        def cached_method(self, args):
+            ...
+
+        # cached classmethod. the storage lifetime follows `A` class
+        @lru_cache()  # the order is important!
+        @classmethod  # always lru_cache on top of classmethod
+        def cached_classmethod(self, args):
+            ...
+
+        # cached staticmethod. the storage lifetime follows `A` class
+        @lru_cache()  # the order is important!
+        @staticmethod  # always lru_cache on top of staticmethod
+        def cached_staticmethod(self, args):
+            ...
+
+    @lru_cache()  # just same as functools.lru_cache
+    def cached_function():
+        ...
+"""
+
 import functools
 from wirerope import Wire, WireRope
 
