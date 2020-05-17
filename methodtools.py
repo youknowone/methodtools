@@ -71,6 +71,9 @@ class _LruCacheWire(Wire):
         # descriptor detection support - never called
         return self.__call__(*args, **kwargs)
 
+    def _on_property(self):
+        return self.__call__()
+
 
 @functools.wraps(_functools_lru_cache)
 def lru_cache(*args, **kwargs):
