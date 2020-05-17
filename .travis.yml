@@ -6,10 +6,10 @@ python:
 - pypy2.7-5.10.0
 - pypy3.5-5.10.1
 - '2.7'
+- '3.8'
 - '3.7'
 - '3.6'
 - '3.5'
-- '3.4'
 - nightly
 install:
 - pip install --upgrade pip
