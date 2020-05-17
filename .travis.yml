@@ -16,8 +16,8 @@ install:
 - pip install flake8 pytest-cov .
 - pip install -e '.[tests]'
 script:
-- flake8 --ignore=E999 wirerope tests setup.py
-- pytest --cov=wirerope -vv tests/
+- flake8 --ignore=E999 methodtools.py tests setup.py
+- pytest --cov=methodtools -vv tests/
 after_success:
 - bash <(curl -s https://codecov.io/bash)
 matrix:
