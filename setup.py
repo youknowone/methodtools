@@ -15,7 +15,7 @@ def get_version():
 
 
 install_requires = [
-    'wirerope==0.3.1',
+    'wirerope==0.4.0',
 ]
 tests_require = [
     'pytest>=3.0.2', 'pytest-cov',
@@ -55,7 +55,7 @@ setup(
     install_requires=install_requires,
     tests_require=tests_require + ['tox', 'tox-pyenv'],
     extras_require={
-        'tests': tests_require,
+        'test': tests_require,
         'docs': docs_require,
         'dev': dev_require,
     },

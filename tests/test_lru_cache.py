@@ -151,3 +151,16 @@ def test_lru_cache():
     assert c.c(2) == 3002
     assert C.s(2) == 4002
     assert c.s(2) == 4002
+
+
+def test_bound_method():
+    class A(object):
+
+        def m(self):
+            return 101
+
+    a = A()
+    f1 = lru_cache()(a.m)
+    f2 = _functools_lru_cache()(a.m)
+
+    assert f1() == f2() == 101
