@@ -3,8 +3,8 @@ language: python
 cache: pip
 sudo: false
 python:
-- pypy2.7-5.10.0
-- pypy3.5-5.10.1
+- pypy2.7-7.1.1
+- pypy3.6-7.1.1
 - '2.7'
 - '3.8'
 - '3.7'
@@ -14,7 +14,7 @@ python:
 install:
 - pip install --upgrade pip
 - pip install flake8 pytest-cov .
-- pip install -e '.[tests]'
+- pip install -e '.[test]'
 script:
 - flake8 --ignore=E999 methodtools.py tests setup.py
 - pytest --cov=methodtools -vv tests/
