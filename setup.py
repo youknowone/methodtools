@@ -15,7 +15,7 @@ def get_version():
 
 
 install_requires = [
-    'wirerope==0.4.1',
+    'wirerope>=0.4.2',
 ]
 tests_require = [
     'pytest>=3.0.2', 'pytest-cov',
