@@ -164,3 +164,16 @@ def test_bound_method():
     f2 = _functools_lru_cache()(a.m)
 
     assert f1() == f2() == 101
+
+
+def test_silent_property():
+    class A:
+        def __init__(self):
+            self.b = 3
+
+        @lru_cache()
+        @property
+        def a(self):
+            # built-in property should not be called when building
+            assert False
+            return self.b
