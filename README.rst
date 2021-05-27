@@ -1,8 +1,7 @@
 methodtools
 ===========
 
-.. image:: https://travis-ci.com/youknowone/methodtools.svg?branch=master
-    :target: https://travis-ci.com/youknowone/methodtools
+.. image:: https://github.com/youknowone/methodtools/actions/workflows/python-package.yml/badge.svg
 .. image:: https://codecov.io/gh/youknowone/methodtools/graph/badge.svg
     :target: https://codecov.io/gh/youknowone/methodtools
 
