@@ -40,7 +40,7 @@ expected - cache for each bound method.
 import functools
 from wirerope import Wire, WireRope
 
-__version__ = '0.4.3'
+__version__ = '0.4.5'
 __all__ = 'lru_cache',
 
 
