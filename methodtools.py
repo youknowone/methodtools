@@ -6,7 +6,7 @@ Expand functools features to methods, classmethods, staticmethods and even for
 
 For now, methodtools only provides :func:`methodtools.lru_cache`.
 
-Use methodtools module instead of functools module. Than it will work as you
+Use methodtools module instead of functools module. Then it will work as you
 expected - cache for each bound method.
 
 .. code-block:: python
