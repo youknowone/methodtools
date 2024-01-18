@@ -60,8 +60,8 @@ To browse versions and tarballs, visit:
 See also
 --------
 
-- [Documentation](https://methodtools.readthedocs.io/en/latest/)
+- `Documentation <https://methodtools.readthedocs.io/en/latest/>`_
 - This project is derived from `Ring <https://github.com/youknowone/ring/>`_,
   a rich cache interface using the same method handling technique.
 - To learn more about bound method dispatching, see also
-  [wirerope](https://github.com/youknowone/wirerope).
+  `wirerope <https://github.com/youknowone/wirerope>`_.
